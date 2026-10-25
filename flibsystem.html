@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flibteam — FlibSystem Architecture</title>
+  <meta name="description" content="Technical breakdown of FlibSystem: instant Windows registry tweaks, live hardware telemetry, and maintenance tools.">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div class="bg-spotlight"></div>
+
+  <nav class="navbar">
+    <div class="nav-wrapper">
+      <a href="index.html" class="nav-brand">
+        <img src="images/logo.png" alt="flibteam" class="nav-avatar">
+        <span class="nav-brand-title">flibteam</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Overview</a></li>
+        <li><a href="flibsystem.html" class="nav-link active">FlibSystem</a></li>
+        <li><a href="flibplat.html" class="nav-link">flibPlatOS</a></li>
+        <li><a href="support.html" class="nav-link">Support & FAQ</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="https://t.me/flibteam" target="_blank" rel="noopener" class="btn btn-secondary">
+          <img src="icons/tg.png" width="14" height="14" alt="Telegram"> Telegram
+        </a>
+        <a href="https://github.com/flibteam/FlibSystem" target="_blank" rel="noopener" class="btn btn-primary">
+          <img src="icons/github.svg" width="14" height="14" alt="GitHub"> GitHub
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <header class="hero" style="margin-bottom: 48px; text-align: left; max-width: 100%;">
+      <div class="hero-pill">
+        <span class="hero-pill-badge">C# / WPF</span>
+        <span>.NET Framework 4.7.2+</span>
+      </div>
+      <h1 class="hero-headline" style="font-size: 44px;">
+        FlibSystem Engine.
+      </h1>
+      <p class="hero-subtitle" style="margin: 0 0 28px; max-width: 720px;">
+        Автономный твикер и мониторинг Windows 10/11. Моментальное переключение ключей реестра без перезагрузки системы, встроенный диспетчер задач и полный контроль компонентов.
+      </p>
+
+      <div class="download-module" style="max-width: 500px;">
+        <div class="download-module-header">
+          <span>FLIBSYSTEM.EXE // DIRECT EXECUTABLE</span>
+          <span>SHA-256 VERIFIED</span>
+        </div>
+
+        <div class="download-links-group">
+          <a href="downloads/FlibSystem.exe" download="FlibSystem.exe" class="btn-direct">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            Скачать FlibSystem.exe (прямая загрузка)
+          </a>
+
+          <a href="https://github.com/flibteam/FlibSystem/releases/latest" target="_blank" rel="noopener" class="alt-link">
+            <img src="icons/github.svg" alt="GitHub">
+            Релизы и исходный код на GitHub
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Technical Specs Grid -->
+    <div class="bento-grid">
+      <div class="bento-card col-7">
+        <div class="card-label">Core Architecture</div>
+        <h3 class="card-title">Мгновенный отклик реестра</h3>
+        <p class="card-description">
+          Все параметры Windows (отключение телеметрии, персонализация Проводника, твики контекстного меню и гейм-мода) переключаются напрямую в ветках реестра без задержек. Перед изменением создается снимок реестра на вкладке «Резервные копии».
+        </p>
+        <div class="code-terminal">
+          <div class="comment">// Visual Studio MSBuild compilation target</div>
+          <div>msbuild src\FlibSystem.csproj /t:Rebuild /p:Configuration=Release /p:Platform=AnyCPU</div>
+        </div>
+      </div>
+
+      <div class="bento-card col-5">
+        <div class="card-label">Telemetry & Hardware</div>
+        <h3 class="card-title">Живые графики</h3>
+        <p class="card-description">
+          Встроенный монитор производительности опрашивает аппаратные датчики в реальном времени: нагрузка на ядра CPU, использование памяти, дисковый I/O, сетевой трафик и видеокарта.
+        </p>
+        <div class="feature-tags">
+          <span class="feature-tag">CPU / RAM / Disk / Net / GPU</span>
+          <span class="feature-tag">Task Manager</span>
+          <span class="feature-tag">Startup Apps</span>
+          <span class="feature-tag">UWP Bloat Removal</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interface Gallery -->
+    <section>
+      <div class="section-meta">
+        <h2 class="section-headline">Интерфейс FlibSystem</h2>
+      </div>
+
+      <div class="gallery-row">
+        <div class="gallery-card">
+          <img src="screenshot/1.png" alt="Сводка" loading="lazy">
+          <div class="gallery-card-info">
+            <span class="gallery-card-title">Главная панель и системная сводка</span>
+            <span class="gallery-card-sub">Dashboard</span>
+          </div>
+        </div>
+        <div class="gallery-card">
+          <img src="screenshot/2.png" alt="Мониторинг" loading="lazy">
+          <div class="gallery-card-info">
+            <span class="gallery-card-title">Диспетчер задач и графики</span>
+            <span class="gallery-card-sub">Performance</span>
+          </div>
+        </div>
+        <div class="gallery-card">
+          <img src="screenshot/3.png" alt="Твики" loading="lazy">
+          <div class="gallery-card-info">
+            <span class="gallery-card-title">Переключатели твиков</span>
+            <span class="gallery-card-sub">Registry</span>
+          </div>
+        </div>
+        <div class="gallery-card">
+          <img src="screenshot/4.png" alt="О программе" loading="lazy">
+          <div class="gallery-card-info">
+            <span class="gallery-card-title">Настройки и темы оформления</span>
+            <span class="gallery-card-sub">Appearance</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal-overlay" id="lightbox-modal">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Закрыть">Esc // Close</button>
+      <img src="" alt="Fullscreen screenshot" id="lightbox-img">
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>&copy; 2026 flibteam. FlibSystem Standalone Utility.</span>
+      <ul class="footer-nav">
+        <li><a href="https://github.com/flibteam/FlibSystem" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://t.me/flibteam" target="_blank" rel="noopener">Telegram</a></li>
+        <li><a href="https://www.donationalerts.com/r/jannirobot" target="_blank" rel="noopener">DonationAlerts</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

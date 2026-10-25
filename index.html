@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flibteam — Windows Performance Architecture</title>
+  <meta name="description" content="Engineering high-performance utilities and debloat playbooks for Windows 10 and 11. Minimalist, telemetry-free, instant execution.">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div class="bg-spotlight"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-wrapper">
+      <a href="index.html" class="nav-brand">
+        <img src="images/logo.png" alt="flibteam" class="nav-avatar">
+        <span class="nav-brand-title">flibteam</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link active">Overview</a></li>
+        <li><a href="flibsystem.html" class="nav-link">FlibSystem</a></li>
+        <li><a href="flibplat.html" class="nav-link">flibPlatOS</a></li>
+        <li><a href="support.html" class="nav-link">Support & FAQ</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="https://t.me/flibteam" target="_blank" rel="noopener" class="btn btn-secondary">
+          <img src="icons/tg.png" width="14" height="14" alt="Telegram">
+          Telegram
+        </a>
+        <a href="https://github.com/flibteam" target="_blank" rel="noopener" class="btn btn-primary">
+          <img src="icons/github.svg" width="14" height="14" alt="GitHub">
+          GitHub
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <!-- Hero -->
+    <header class="hero">
+      <div class="hero-pill">
+        <span class="hero-pill-badge">v2026.1</span>
+        <span>Windows 10 / 11 System Engineering</span>
+      </div>
+
+      <h1 class="hero-headline">
+        Engineering performance<br>
+        for Windows.
+      </h1>
+
+      <p class="hero-subtitle">
+        Два бескомпромиссных инструмента: системная утилита FlibSystem с мгновенными твиками и плейбук flibPlatOS для глубокого вырезания мусора Microsoft. Прямая загрузка с сервера без ожидания и сторонних файлообменников.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="#products" class="btn btn-primary">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+          Выбрать инструмент
+        </a>
+        <a href="https://www.donationalerts.com/r/jannirobot" target="_blank" rel="noopener" class="btn btn-secondary">
+          <img src="icons/donationalerts.svg" width="15" height="15" alt="Donate">
+          Поддержать проект
+        </a>
+      </div>
+    </header>
+
+    <!-- Bento Products Grid -->
+    <section id="products" class="bento-grid">
+      <!-- FlibSystem Card -->
+      <article class="bento-card col-7">
+        <div class="card-label">Flagship Application // C# WPF</div>
+        <h2 class="card-title">FlibSystem</h2>
+        <p class="card-description">
+          Системный комбайн нового поколения. Применение твиков реестра в один клик без командной строки. Встроенный диспетчер задач с живыми графиками телеметрии, контроль автозагрузки, пакетный деинсталлятор UWP и бэкап веток реестра.
+        </p>
+
+        <div class="feature-tags">
+          <span class="feature-tag">Instant Tweaks</span>
+          <span class="feature-tag">CPU / RAM / GPU Graphs</span>
+          <span class="feature-tag">SHA-256 Checksum</span>
+          <span class="feature-tag">macOS Aqua & Dark</span>
+          <span class="feature-tag">UWP Cleaner</span>
+        </div>
+
+        <div class="app-frame">
+          <div class="app-frame-bar">
+            <span class="traffic-light"></span>
+            <span class="traffic-light"></span>
+            <span class="traffic-light"></span>
+            <span class="app-frame-title">FlibSystem.exe — System Overview</span>
+          </div>
+          <div class="app-frame-content">
+            <img src="screenshot/1.png" alt="FlibSystem Interface">
+          </div>
+        </div>
+
+        <div class="download-module" style="margin-top: 24px;">
+          <div class="download-module-header">
+            <span>FLIBSYSTEM // PORTABLE EXECUTABLE</span>
+            <span>SHA-256 VERIFIED</span>
+          </div>
+
+          <div class="download-links-group">
+            <a href="downloads/FlibSystem.exe" download="FlibSystem.exe" class="btn-direct">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              Скачать FlibSystem.exe (прямая загрузка)
+            </a>
+
+            <a href="https://github.com/flibteam/FlibSystem/releases/latest" target="_blank" rel="noopener" class="alt-link">
+              <img src="icons/github.svg" alt="GitHub">
+              Репозиторий и релизы на GitHub
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- flibPlatOS Card -->
+      <article class="bento-card col-5">
+        <div class="card-label">AME Playbook // ReviOS Style</div>
+        <h2 class="card-title">flibPlatOS</h2>
+        <p class="card-description">
+          Плейбук формата <code>.apbx</code> для развертывания через AME Wizard. Полная зачистка Edge, OneDrive, Teams, служб телеметрии Microsoft, тюнинг файловой системы NTFS и оффлайн-установка базового набора софта.
+        </p>
+
+        <div class="feature-tags">
+          <span class="feature-tag">AME Wizard 0.8.x</span>
+          <span class="feature-tag">Edge / Teams Purge</span>
+          <span class="feature-tag">Ultimate Performance</span>
+          <span class="feature-tag">Offline App Bundles</span>
+        </div>
+
+        <div class="code-terminal" style="margin-bottom: 24px;">
+          <div class="comment"># Target build matrix</div>
+          <div><span class="highlight">Win 10:</span> 19044, 19045</div>
+          <div><span class="highlight">Win 11:</span> 22631, 26100, 26200</div>
+          <div class="comment" style="margin-top: 8px;"># Build APBX from source</div>
+          <div style="color: #38bdf8;">powershell .\build.ps1</div>
+        </div>
+
+        <div class="download-module">
+          <div class="download-module-header">
+            <span>FLIBPLAT.APBX // PLAYBOOK PACKAGE</span>
+            <span>AME 0.8.X</span>
+          </div>
+
+          <div class="download-links-group">
+            <a href="downloads/flibPlat.apbx" download="flibPlat.apbx" class="btn-direct">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              Скачать flibPlat.apbx (прямая загрузка)
+            </a>
+
+            <a href="https://github.com/flibteam/flibPlat/releases/latest" target="_blank" rel="noopener" class="alt-link">
+              <img src="icons/github.svg" alt="GitHub">
+              Репозиторий и релизы на GitHub
+            </a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Screenshot Gallery -->
+    <section>
+      <div class="section-meta">
+        <h2 class="section-headline">Интерфейс и архитектура</h2>
+        <p class="section-desc">Строгий дизайн в стилистике нативных системных панелей macOS.</p>
+      </div>
+
+      <div class="gallery-row">
+        <div class="gallery-card">
+          <img src="screenshot/2.png" alt="Мониторинг" loading="lazy">
+          <div class="gallery-card-info">
+            <span class="gallery-card-title">Диспетчер задач и мониторинг</span>
+            <span class="gallery-card-sub">Real-time Graphs</span>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <img src="screenshot/3.png" alt="Твики" loading="lazy">
+          <div class="gallery-card-info">
+            <span class="gallery-card-title">Каталог твиков и оптимизаций</span>
+            <span class="gallery-card-sub">Instant Toggles</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal Lightbox -->
+  <div class="modal-overlay" id="lightbox-modal">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Закрыть">Esc // Close</button>
+      <img src="" alt="Fullscreen screenshot" id="lightbox-img">
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>&copy; 2026 flibteam. High-Performance Windows Utilities.</span>
+      <ul class="footer-nav">
+        <li><a href="https://github.com/flibteam" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://t.me/flibteam" target="_blank" rel="noopener">Telegram</a></li>
+        <li><a href="https://www.donationalerts.com/r/jannirobot" target="_blank" rel="noopener">DonationAlerts</a></li>
+        <li><a href="support.html">Documentation & FAQ</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
